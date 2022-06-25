@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.PrimaryController">
+   <children>
+      <HBox spacing="10" alignment="CENTER">
+         <Button fx:id="7" text="7" onAction="#sevenHandeler" />
+         <Button fx:id="8" text="8" onAction="#eightHandeler" />
+         <Button fx:id="9" text="9" onAction="#nineHandeler" />
+         <Button fx:id="primaryButton" text="+" onAction="#switchToSecondary" />
+      </HBox>
+      <HBox spacing="10" alignment="CENTER">
+         <Button fx:id="4" text="4" onAction="#fourHandeler" />
+         <Button fx:id="5" text="5" onAction="#fiveHandeler" />
+         <Button fx:id="6" text="6" onAction="#sixHandeler" />
+         <Button fx:id="primaryButton" text="-" onAction="#switchToSecondary" />
+      </HBox>
+      <HBox spacing="10" alignment="CENTER">
+         <Button fx:id="1" text="1" onAction="#oneHandeler" />
+         <Button fx:id="2" text="2" onAction="#twoHandeler" />
+         <Button fx:id="3" text="3" onAction="#threeHandeler" />
+         <Button fx:id="primaryButton" text="*" onAction="#switchToSecondary" />
+      </HBox>
+      <HBox spacing="10" alignment="CENTER">
+         <Button fx:id="0" text="      0      " onAction="#zeroHandeler" />
+         <Button fx:id="primaryButton" text="=" onAction="#switchToSecondary" />
+         <Button fx:id="primaryButton" text="/" onAction="#switchToSecondary" />
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
