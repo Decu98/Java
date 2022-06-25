@@ -2,12 +2,50 @@ package com.calculator;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 public class PrimaryController {
 
     @FXML
+    private Label textCalculation, textResult;
+
+    @FXML
+    private void equalHandeler() throws IOException {
+        Calculation.setResult();
+        updateText();
+    }
+
+    @FXML
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
+    }
+
+    @FXML
+    private void addHandeler() throws IOException {
+        Calculation.saveNumber();
+        Calculation.setOperation("+");
+        updateText();
+    }
+
+    @FXML
+    private void subHandeler() throws IOException {
+        Calculation.saveNumber();
+        Calculation.setOperation("-");
+        updateText();
+    }
+
+    @FXML
+    private void mulHandeler() throws IOException {
+        Calculation.saveNumber();
+        Calculation.setOperation("*");
+        updateText();
+    }
+
+    @FXML
+    private void divHandeler() throws IOException {
+        Calculation.saveNumber();
+        Calculation.setOperation("/");
+        updateText();
     }
 
     @FXML
@@ -61,7 +99,18 @@ public class PrimaryController {
     }
 
     private void mainHandeler(String number) throws IOException {
+        if (Calculation.getResult() != "") {
+            Calculation.resetCal();
+        }
         Calculation.transferNumber(number);
+        updateText();
+    }
+
+    private void updateText() throws IOException {
+        String textCal = Calculation.getSaved() + Calculation.getOperation() + Calculation.getCurrent();
+        String textRes = Calculation.getResult();
+        textCalculation.setText(textCal);
+        textResult.setText(textRes);
     }
 
 }
