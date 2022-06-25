@@ -29,7 +29,8 @@
          <Button fx:id="primaryButton" text="*" onAction="#mulHandeler" />
       </HBox>
       <HBox spacing="10" alignment="CENTER">
-         <Button fx:id="0" text="      0      " onAction="#zeroHandeler" />
+         <Button fx:id="0" text="0" onAction="#zeroHandeler" />
+         <Button fx:id="dot" text="." onAction="#dotHandeler" />
          <Button fx:id="primaryButton" text="=" onAction="#equalHandeler" />
          <Button fx:id="primaryButton" text="/" onAction="#divHandeler" />
       </HBox>

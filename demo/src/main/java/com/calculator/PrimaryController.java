@@ -10,6 +10,12 @@ public class PrimaryController {
     private Label textCalculation, textResult;
 
     @FXML
+    private void dotHandeler() throws IOException {
+        Calculation.addDot();
+        updateText();
+    }
+
+    @FXML
     private void equalHandeler() throws IOException {
         Calculation.setResult();
         updateText();

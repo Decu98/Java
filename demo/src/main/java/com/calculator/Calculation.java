@@ -1,5 +1,8 @@
 package com.calculator;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+
 public class Calculation {
 
     private static String currentNumber = "";
@@ -7,6 +10,16 @@ public class Calculation {
     private static String resultNumber = "";
     private static String tempNumber = "";
     private static String operation = "";
+
+    static void addDot() {
+        if (currentNumber == "") {
+            currentNumber = "0.";
+        } else if (currentNumber.contains(".")) {
+            currentNumber = currentNumber;
+        } else {
+            currentNumber = currentNumber + ".";
+        }
+    }
 
     static void resetCal() {
         resultNumber = "";
@@ -31,6 +44,14 @@ public class Calculation {
 
     static void setOperation(String input) {
         operation = input;
+        if (resultNumber != "") {
+            savedNumber = tempNumber;
+            currentNumber = "";
+            resultNumber = "";
+        }
+        if (savedNumber == "") {
+            savedNumber = "0";
+        }
     }
 
     static String getCurrent() {
@@ -62,18 +83,19 @@ public class Calculation {
     }
 
     private static String calculateResult() {
-        int n1 = Integer.parseInt(savedNumber);
-        int n2 = Integer.parseInt(currentNumber);
-        int result = Integer.parseInt(currentNumber);
+        double n1 = Double.parseDouble(savedNumber);
+        double n2 = Double.parseDouble(currentNumber);
+        double result = Double.parseDouble(currentNumber);
         if (operation == "+") {
             result = n1 + n2;
         } else if (operation == "-") {
             result = n1 - n2;
         } else if (operation == "*") {
-            result = n1 + n2;
+            result = n1 * n2;
         } else if (operation == "/") {
             result = n1 / n2;
         }
-        return String.valueOf(result);
+        double roundedRes = Math.round(result * 100.0) / 100.0;
+        return String.valueOf(roundedRes);
     }
 }
