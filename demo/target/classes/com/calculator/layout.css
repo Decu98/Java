@@ -1,0 +1,22 @@
+VBox{
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.button-calculation{
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+}
+
+.label-calculation{
+    -fx-border-radius: 10px;
+    -fx-border-style: solid;
+    -fx-border-color: #E7E9EB;
+    -fx-background-radius: 10px;
+    -fx-background-color: #E7E9EB;
+}
+
+Label{
+    -fx-padding: 10px 10px 10px 10px;
+}

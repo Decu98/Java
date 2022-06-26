@@ -1,8 +1,5 @@
 package com.calculator;
 
-import java.math.BigDecimal;
-import java.math.MathContext;
-
 public class Calculation {
 
     private static String currentNumber = "";
@@ -15,7 +12,7 @@ public class Calculation {
         if (currentNumber == "") {
             currentNumber = "0.";
         } else if (currentNumber.contains(".")) {
-            currentNumber = currentNumber;
+            // Do nothing
         } else {
             currentNumber = currentNumber + ".";
         }
@@ -73,12 +70,8 @@ public class Calculation {
     private static void addNumber(String input) {
         if (currentNumber != null) {
             currentNumber = currentNumber + input;
-            String s = currentNumber;
-            System.out.println(s);
         } else {
             currentNumber = input;
-            String s = currentNumber;
-            System.out.println(s);
         }
     }
 

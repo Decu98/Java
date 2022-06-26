@@ -6,33 +6,37 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 
+<?xml-stylesheet href="layout.css" type="text/css"?>
+
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.PrimaryController">
    <children>
-      <Label fx:id="textCalculation" text=""></Label>
-      <Label fx:id="textResult" text=""></Label>
+      <VBox styleClass="label-calculation" alignment="CENTER">
+         <Label fx:id="textCalculation" text=""></Label>
+         <Label fx:id="textResult" text=""></Label>
+      </VBox>
       <HBox spacing="10" alignment="CENTER">
-         <Button fx:id="7" text="7" onAction="#sevenHandeler" />
-         <Button fx:id="8" text="8" onAction="#eightHandeler" />
-         <Button fx:id="9" text="9" onAction="#nineHandeler" />
-         <Button fx:id="primaryButton" text="+" onAction="#addHandeler" />
+         <Button fx:id="7" styleClass="button-calculation" text="7" onAction="#sevenHandeler" />
+         <Button fx:id="8" styleClass="button-calculation" text="8" onAction="#eightHandeler" />
+         <Button fx:id="9" styleClass="button-calculation" text="9" onAction="#nineHandeler" />
+         <Button fx:id="primaryButton" styleClass="button-calculation" text="+" onAction="#addHandeler" />
       </HBox>
       <HBox spacing="10" alignment="CENTER">
-         <Button fx:id="4" text="4" onAction="#fourHandeler" />
-         <Button fx:id="5" text="5" onAction="#fiveHandeler" />
-         <Button fx:id="6" text="6" onAction="#sixHandeler" />
-         <Button fx:id="primaryButton" text="-" onAction="#subHandeler" />
+         <Button fx:id="4" styleClass="button-calculation" text="4" onAction="#fourHandeler" />
+         <Button fx:id="5" styleClass="button-calculation" text="5" onAction="#fiveHandeler" />
+         <Button fx:id="6" styleClass="button-calculation" text="6" onAction="#sixHandeler" />
+         <Button fx:id="primaryButton" styleClass="button-calculation" text="-" onAction="#subHandeler" />
       </HBox>
       <HBox spacing="10" alignment="CENTER">
-         <Button fx:id="1" text="1" onAction="#oneHandeler" />
-         <Button fx:id="2" text="2" onAction="#twoHandeler" />
-         <Button fx:id="3" text="3" onAction="#threeHandeler" />
-         <Button fx:id="primaryButton" text="*" onAction="#mulHandeler" />
+         <Button fx:id="1" text="1" styleClass="button-calculation" onAction="#oneHandeler" />
+         <Button fx:id="2" text="2" styleClass="button-calculation" onAction="#twoHandeler" />
+         <Button fx:id="3" text="3" styleClass="button-calculation" onAction="#threeHandeler" />
+         <Button fx:id="primaryButton" styleClass="button-calculation" text="*" onAction="#mulHandeler" />
       </HBox>
       <HBox spacing="10" alignment="CENTER">
-         <Button fx:id="0" text="0" onAction="#zeroHandeler" />
-         <Button fx:id="dot" text="." onAction="#dotHandeler" />
-         <Button fx:id="primaryButton" text="=" onAction="#equalHandeler" />
-         <Button fx:id="primaryButton" text="/" onAction="#divHandeler" />
+         <Button fx:id="0" styleClass="button-calculation" text="0" onAction="#zeroHandeler" />
+         <Button fx:id="dot" styleClass="button-calculation" text="." onAction="#dotHandeler" />
+         <Button fx:id="primaryButton" styleClass="button-calculation" text="=" onAction="#equalHandeler" />
+         <Button fx:id="primaryButton" styleClass="button-calculation" text="/" onAction="#divHandeler" />
       </HBox>
    </children>
    <padding>
